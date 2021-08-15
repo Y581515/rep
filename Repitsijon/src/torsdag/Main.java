@@ -33,7 +33,7 @@ public class Main {
 		System.out.println("Er A og B venner ? " + gr1.erVenner("A", "B"));
 		System.out.println("Er A og B venner ? " + gr1.erVenner("A", "C"));
 		System.out.println();
-		System.out.println("Venner ril A er " + gr1.g.getNaboer("A"));
+		System.out.println("Venner til A er " + gr1.g.getNaboer("A"));
 
 	}
 }
