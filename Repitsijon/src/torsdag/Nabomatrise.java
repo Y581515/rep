@@ -14,6 +14,7 @@ public class Nabomatrise implements Graf {
 	private Map<String, Integer> nodenavn;
 	private String[] navn;
 
+	@Override
 	public String[] getNavn() {
 		return navn;
 	}
@@ -40,6 +41,7 @@ public class Nabomatrise implements Graf {
 	 * Grafen har 2 kanter.
 	 *
 	 */
+	@Override
 	public void printUt() {
 
 		for (int i = 0; i < n; i++) {
@@ -50,8 +52,13 @@ public class Nabomatrise implements Graf {
 		for (int i = 0; i < n; i++) {
 			System.out.print(navn[i]);
 			for (int j = 0; j < n; j++) {
+				String mellomrom="";
+				
+				switch()
+				
+				
 				String s = matrise[i][j] ? "T" : ".";
-				System.out.print(String.format("       %-2S", s));
+				System.out.print(String.format(mellomrom+"%-2S", s));
 //				if (matrise[i][j]) {
 //					System.out.print("   T   ");
 //				} else {
@@ -174,13 +181,17 @@ public class Nabomatrise implements Graf {
 	@Override
 	public List<String> getNaboer(String w) {
 		ArrayList<String> listen = new ArrayList<>();
-		int iw = nodenavn.get(w);
 
-		for (int i = 0; i < nodenavn.size(); i++) {
-			if (matrise[iw][i]) {
-				listen.add(navn[i]);
+		Integer iw = nodenavn.get(w);
+
+		if (!(iw == null)) {
+			for (int i = 0; i < nodenavn.size(); i++) {
+				if (matrise[iw][i]) {
+					listen.add(navn[i]);
+				}
 			}
 		}
+
 		return listen;
 	}
 

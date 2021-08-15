@@ -10,16 +10,16 @@ public class Main {
 		 * Grafen har 2 kanter.
 		 *
 		 */
-		String[] g1 = { "A", "B", "C", "D" };
+		String[] g1 = { "Anne", "Bjørn", "Edvard", "Fiona" };
 		Facebook gr1 = new Facebook("DAT102", g1);
-		System.out.println(gr1.leggTilVenner("A", "B"));
+		System.out.println(gr1.leggTilVenner("Anne", "Bjørn"));
 
 		System.out.println(gr1.g.getNavn()[0]);
 
-		gr1.leggTilVenner("A", "B");
-		gr1.leggTilVenner("A", "C");
-		gr1.leggTilVenner("C", "D");
-		gr1.leggTilVenner("B", "E");
+		gr1.leggTilVenner("Anne", "Bjørn");
+		gr1.leggTilVenner("Anne", "Edvard");
+		gr1.leggTilVenner("Edvard", "Fiona");
+		gr1.leggTilVenner("Bjørn", "Fiona");
 		System.out.println();
 		gr1.printUtF();
 		System.out.println();
@@ -30,10 +30,12 @@ public class Main {
 		System.out.println();
 		System.out.println("liste av noder = " + gr1.g.alleNoder());
 		System.out.println();
-		System.out.println("Er A og B venner ? " + gr1.erVenner("A", "B"));
-		System.out.println("Er A og B venner ? " + gr1.erVenner("A", "C"));
+		System.out.println("Er Anne og Bjørn venner ? " + gr1.erVenner("Anne", "Bjørn"));
+		System.out.println("Er Anne og Edvard venner ? " + gr1.erVenner("Anne", "Edvard"));
 		System.out.println();
-		System.out.println("Venner til A er " + gr1.g.getNaboer("A"));
+		System.out.println("Venner til Anne er " + gr1.g.getNaboer("Anne"));
+		System.out.println();
+		gr1.visGraf();
 
 	}
 }

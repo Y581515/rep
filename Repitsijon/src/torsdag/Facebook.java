@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Facebook {
 	private String gruppeNavn;
-	public Nabomatrise g;
+	public Graf g;
 	
 	public Facebook(String navnPaaGruppe, String[] navn) {
 		this.gruppeNavn=navnPaaGruppe;
