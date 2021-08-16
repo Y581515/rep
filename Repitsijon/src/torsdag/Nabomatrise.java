@@ -43,33 +43,80 @@ public class Nabomatrise implements Graf {
 	 */
 	@Override
 	public void printUt() {
+		String mellomrom = "";
 
 		for (int i = 0; i < n; i++) {
-			System.out.print("        " + navn[i]);
+			String namn = navn[i];
+			System.out.print(String.format("%16S", namn));
 		}
-		System.out.println("\n-----------------------------------------");
+		System.out.println(
+				"\n------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
 		for (int i = 0; i < n; i++) {
 			System.out.print(navn[i]);
 			for (int j = 0; j < n; j++) {
-				String mellomrom="";
-				
-				switch()
-				
-				
+
+				switch (navn[i].length()) {
+				case 1:
+					mellomrom = "              ";
+					break;
+				case 2:
+					mellomrom = "             ";
+					;
+					break;
+				case 3:
+					mellomrom = "            ";
+					;
+					break;
+				case 4:
+					mellomrom = "           ";
+					;
+					break;
+				case 5:
+					mellomrom = "          ";
+					;
+					break;
+				case 6:
+					mellomrom = "         ";
+					;
+					break;
+				case 7:
+					mellomrom = "        ";
+					;
+					break;
+				case 8:
+					mellomrom = "       ";
+					;
+					break;
+				case 9:
+					mellomrom = "      ";
+					;
+					break;
+				case 10:
+					mellomrom = "     ";
+					break;
+				default:
+					mellomrom = "    ";
+					break;
+				}
+
 				String s = matrise[i][j] ? "T" : ".";
-				System.out.print(String.format(mellomrom+"%-2S", s));
+				if (j == 0) {
+					System.out.print(String.format(mellomrom + "%1S", s));
+				} else {
+					System.out.print(String.format("%16S", s));
+				}
+
 //				if (matrise[i][j]) {
-//					System.out.print("   T   ");
+//					System.out.print(mellomrom + "T" + mellomrom);
 //				} else {
-//					System.out.print("   .   ");
+//					System.out.print(mellomrom + "." + mellomrom);
 //				}
 
 			}
 
 			System.out.println();
 		}
-
 	}
 
 	@Override
@@ -180,12 +227,12 @@ public class Nabomatrise implements Graf {
 
 	@Override
 	public List<String> getNaboer(String w) {
-		ArrayList<String> listen = new ArrayList<>();
+		List<String> listen = new ArrayList<>();
 
 		Integer iw = nodenavn.get(w);
 
 		if (!(iw == null)) {
-			for (int i = 0; i < nodenavn.size(); i++) {
+			for (int i = 0; i < n; i++) {
 				if (matrise[iw][i]) {
 					listen.add(navn[i]);
 				}
