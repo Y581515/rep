@@ -1,12 +1,14 @@
 package testMatrise;
 
+
+
 import static org.junit.Assert.*;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
-//import java.util.Arrays;
-//import java.util.List;
+import java.util.Arrays;
+import java.util.List;
 
 import torsdag.Graf;
 import torsdag.Nabomatrise;
@@ -14,11 +16,12 @@ import torsdag.Nabomatrise;
 /**
  * The test class NabomatriseTest.
  *
- * @author (your name)
+ * @author  (your name)
  * @version (a version number or a date)
  */
-public class NabomatriseTest {
-	private String[] nodenavn = { "A", "B", "C", "D", "E" };
+public class NabomatriseTest
+{
+    private String[] nodenavn = { "A", "B", "C", "D", "E" };
 	private Graf g;
 
 	@Before

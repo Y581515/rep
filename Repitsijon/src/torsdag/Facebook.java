@@ -1,5 +1,6 @@
 package torsdag;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Facebook {
@@ -39,6 +40,23 @@ public class Facebook {
 //		fellesVenner.retainAll(g.getNaboer(p2));
 //		return fellesVenner.size();
 
+	}
+
+	public String maksVenner() {
+		List<String> listNaboer;
+		String flest = "";
+		int maks = 0;
+
+		for (String p : g.alleNoder()) {
+			listNaboer = g.getNaboer(p);
+			int listeStorelse = listNaboer.size();
+			if (listeStorelse >= maks) {
+				maks = listeStorelse;
+				flest = p;
+			}
+		}
+
+		return flest;
 	}
 
 	void visGraf1() {
