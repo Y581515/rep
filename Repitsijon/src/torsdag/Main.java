@@ -39,9 +39,9 @@ public class Main {
 		System.out.println();
 
 		System.out.println();
-		System.out.println("antall kanter: " + gr1.g.getAntallKanter());
+		System.out.println("antall kanter : " + gr1.g.getAntallKanter());
 		System.out.println();
-		System.out.println("liste av noder = " + gr1.g.alleNoder());
+		System.out.println("liste av noder =  " + gr1.g.alleNoder());
 		System.out.println();
 		System.out.println("Er Anne og Bjorn venner ? " + gr1.erVenner("Anne", "Bjorn"));
 		System.out.println("Er Ole og Bjorn venner ? " + gr1.erVenner("Ole", "Bjorn"));
