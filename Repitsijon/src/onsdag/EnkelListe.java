@@ -13,7 +13,7 @@ public class EnkelListe<T> {
 		LinearNode<T> nyNode = new LinearNode<T>(element);
 		nyNode.setNeste(forste);
 		forste = nyNode;
-		antall++;
+		antall++ ;
 
 	}
 
